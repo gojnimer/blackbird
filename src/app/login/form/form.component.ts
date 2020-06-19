@@ -1,5 +1,6 @@
 import { LoginService } from './../login.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor(private log:LoginService) { }
+  constructor(private log:LoginService,private rota:Router) { }
 
   title ;
   ngOnInit(): void {
@@ -19,6 +20,11 @@ export class FormComponent implements OnInit {
     this.log.getUsuario();
     
     this.title = !this.title;
+  }
+
+  logar(){
+    localStorage.setItem('token','logado');
+    this.rota.navigate(['/']);
   }
 
 }
