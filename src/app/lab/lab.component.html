@@ -1,0 +1,12 @@
+
+{{inputText}}
+
+<input class="mt-5 d-block" [value]="inputText">
+<input class="mt-5 d-block" value="{{inputText}}">
+<input class="mt-5 d-block" [value]="inputText ? inputText : 'Sem valor'">
+<input class="mt-5 d-block" [value]="inputText" (input)="onSearchChange($event.target.value)">
+<input class="mt-5 d-block" [(ngModel)]="inputText">
+<button class="mt-5" (click)="btnClick()">Verificar Valor</button>
+
+
+<botao-brabo titulo="Teste" (clickBtnBrabo)="btnClick()"></botao-brabo>
