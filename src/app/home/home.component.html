@@ -1,2 +1,37 @@
-<p>home works!</p>
-<app-header></app-header>
+<div class="container mt-5">
+
+
+
+
+
+
+
+
+
+    <div *ngFor="let item of this.lista; index as i">
+        <div class="alert alert-primary" role="alert" (mouseleave)="updateI(6566)" (mouseenter)="updateI(i + 1)">
+            {{ (i + 1)  + ' - '+ item.nome + ' ' + item.sobrenome }}
+          </div>
+        
+    </div>
+
+
+
+    <div [ngSwitch]="indexList">
+        <div *ngSwitchCase="1">{{ lista[0].nome }}</div>
+        <div *ngSwitchCase="2">{{ lista[1].nome }}</div>
+        <div *ngSwitchCase="3">{{ lista[2].nome }}</div>
+        <div *ngSwitchCase="4">{{ lista[3].nome }}</div>
+        <div *ngSwitchDefault>No Condition</div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</div>

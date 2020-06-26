@@ -12,19 +12,21 @@ export class FormComponent implements OnInit {
   constructor(private log:LoginService,private rota:Router) { }
 
   title ;
+
   ngOnInit(): void {
     this.title = this.log.getUsuario();
   }
 
-  teste(){
+ /*  teste(){
     this.log.getUsuario();
     
     this.title = !this.title;
-  }
+  } */
 
   logar(){
     localStorage.setItem('token','logado');
     this.rota.navigate(['/']);
+    this.log.Logged.next(this.log.isUserLoggedIn());
   }
 
 }
