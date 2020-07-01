@@ -1,3 +1,4 @@
+import { SecurityComponent } from './security/security.component';
 import { AuthGuard } from './guards/auth.guard';
 import { ErrorComponent } from './error/error.component';
 import { LabComponent } from './lab/lab.component';
@@ -8,17 +9,22 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
+
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'
   },
-  {path:'login', component:LoginComponent},
+
+  {path:'security/:form', component:SecurityComponent},
+
   {path:'home',component:HomeComponent, canActivate:[AuthGuard] },
-  {path:'test',component:LabComponent},
+
+ /*  {path:'test',component:LabComponent},
+
   {path:'veiculos', loadChildren: async () =>{
       let e = await import('./veiculos/veiculos.module');
       return e.VeiculosModule;}
-  },
+  }, */
 
   {path:'**',component:ErrorComponent} 
  

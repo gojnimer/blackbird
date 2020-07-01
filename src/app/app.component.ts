@@ -1,6 +1,6 @@
-import { LoginService } from './login/login.service';
+
 import { Component } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { GlobalSecurityService } from './security/services/global-security.service';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
 export class AppComponent {
 
 
-  constructor(private loginService:LoginService){
+  constructor(private loginService:GlobalSecurityService){
     
     this.loginService.Logged.subscribe((novoValor) =>{
       this.canShow = novoValor;

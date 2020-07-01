@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "blackbird-d6fe7"
+  },
+  "targets": {
+    "blackbird-d6fe7": {
+      "hosting": {
+        "turma-blackbird": [
+          "blackbird-d6fe7"
+        ]
+      }
+    }
+  }
+}

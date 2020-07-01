@@ -1,3 +1,4 @@
+import { SecurityModule } from './security/security.module';
 import { SharedModule } from './shared/shared.module';
 import { LoginModule } from './login/login.module';
 import { HomeModule } from './home/home.module';
@@ -26,7 +27,8 @@ import { ErrorComponent } from './error/error.component';
     HomeModule,
     LoginModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    SecurityModule
   ],
   providers: [],
   bootstrap: [AppComponent]

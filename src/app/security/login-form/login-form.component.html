@@ -1,0 +1,20 @@
+<form [formGroup]="loginForm" class="mt-5" (submit)="onSubmit()">
+  
+    <div class="form-group">
+      <label >Usuário</label>
+      <input type="email" formControlName="usuario" class="form-control"  aria-describedby="emailHelp">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+     
+    </div>
+
+    <div class="form-group">
+      <label >Senha</label>
+      <input type="password" formControlName="senha" class="form-control" >
+     
+    
+    </div>
+
+
+
+    <button class="btn d-block btn-primary" >Submit</button>
+</form>

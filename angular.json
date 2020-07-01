@@ -122,8 +122,13 @@
               "devServerTarget": "turma-blackbird:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "turma-blackbird"
 }
