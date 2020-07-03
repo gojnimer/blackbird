@@ -1,17 +1,36 @@
-<form>
+<form [formGroup]="loginForm" class="mt-5" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+   
+    <label>Nome</label>
+    <input type="text"  formControlName="nome" class="form-control"  aria-describedby="emailHelp">
+
+
+  </div>
   
-    <div class="form-group">
-      <label for="exampleInputEmail1" >Email address</label>
-      <input type="email"  class="form-control" aria-describedby="emailHelp">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
+  <div class="form-group">
+   
+    <label >Usuário</label>
+    <input type="email"  formControlName="usuario" class="form-control"  aria-describedby="emailHelp">
 
 
+  </div>
 
-    <button class="btn btn-primary" >Submit</button>
-  </form>
+  <div class="form-group">
+    <label >Senha</label>
+    <input type="password" formControlName="senha" class="form-control" >
+    
+  
+  </div>
+  <div class="form-group">
+   
+    <label >CEP</label>
+    <input type="number"  formControlName="cep" class="form-control"  aria-describedby="emailHelp">
+
+
+  </div>
+
+
+
+  <button class="btn d-block btn-primary" >Submit</button>
+</form>
+

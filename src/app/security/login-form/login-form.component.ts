@@ -19,15 +19,20 @@ export class LoginFormComponent implements OnInit, OnDestroy {
   });
 
   loginRequest: Subscription;
-
+  
+   
   onSubmit(){
-   console.log(this.loginForm);
+    console.log(this.loginForm.controls.usuario.errors?.required);
+    console.log(this.loginForm.controls.usuario.touched);
+ /*   console.log(this.loginForm); */
+  
    if(this.loginForm.invalid){
      alert("campos invalidos");
      return;
    }
    this.loginRequest = this.util.appLogin(this.loginForm.value).subscribe((response:any) => {
       console.log(response);
+      
       if(response.length == 0){
        alert("usuário não encontrado");
       }else{

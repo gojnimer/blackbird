@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { GlobalSecurityService } from './services/global-security.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http'
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers:[GlobalSecurityService],
   exports:[SecurityComponent]

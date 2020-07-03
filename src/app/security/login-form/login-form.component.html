@@ -1,15 +1,19 @@
-<form [formGroup]="loginForm" class="mt-5" (submit)="onSubmit()">
+<form [formGroup]="loginForm" class="mt-5" (ngSubmit)="onSubmit()">
   
     <div class="form-group">
-      <label >Usuário</label>
-      <input type="email" formControlName="usuario" class="form-control"  aria-describedby="emailHelp">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
      
+      <label >Usuário</label>
+      <input type="email"  formControlName="usuario" class="form-control"  aria-describedby="emailHelp">
+
+      <alert text="O campo não pode ser nulo" [hidden]="this.loginForm.controls.usuario.touched ? this.loginForm.controls.usuario.hasError('required') ? false : true : true"></alert> 
+    
+      <alert text="O campo não é um email" [hidden]="(this.loginForm.controls.usuario.touched ? this.loginForm.controls.usuario.hasError('email') ? false : true : true)"></alert>
     </div>
 
     <div class="form-group">
       <label >Senha</label>
       <input type="password" formControlName="senha" class="form-control" >
+      <alert text="O campo não pode ser nulo" [hidden]="this.loginForm.controls.senha.touched ? this.loginForm.controls.senha.hasError('required') ? false : true : true"></alert>
      
     
     </div>
@@ -18,3 +22,4 @@
 
     <button class="btn d-block btn-primary" >Submit</button>
 </form>
+

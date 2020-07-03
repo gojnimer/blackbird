@@ -18,6 +18,10 @@ export class GlobalSecurityService {
     return this.http.get("http://localhost:3000/usuarios?usuario=" + body.usuario + "&senha=" + body.senha);
   }
 
+  appCadastro(body){
+    return this.http.post("http://localhost:3000/usuarios",body);
+  }
+
   isUserLoggedIn():boolean{
     let t = localStorage.getItem('token');
     return t ? true : false;

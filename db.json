@@ -9,6 +9,34 @@
       "usuario": "testpost@gmail.com",
       "senha": "123456",
       "id": 2
+    },
+    {
+      "usuario": "adm123@gmail.com",
+      "senha": "123456",
+      "nome": "Teste",
+      "cep": 3282001,
+      "id": 3
+    },
+    {
+      "usuario": "aaaa@gmail.com",
+      "senha": "123456",
+      "nome": "teste12",
+      "cep": 32132141231,
+      "id": 4
+    },
+    {
+      "usuario": "teste@gmail.com",
+      "senha": "1234512345",
+      "nome": "Gui",
+      "cep": 10120321,
+      "id": 5
+    },
+    {
+      "usuario": "gaia@gmail.com",
+      "senha": "1234512345",
+      "nome": "gaia",
+      "cep": 3231231,
+      "id": 6
     }
   ]
 }
